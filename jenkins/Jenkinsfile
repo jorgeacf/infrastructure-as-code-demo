@@ -5,23 +5,6 @@ pipeline {
 
     stages {
 
-        stage('Clone sources') {
-            steps {
-                checkout([$class: 'GitSCM',
-                          branches: [[name: '*/master']],
-                          doGenerateSubmoduleConfigurations: false,
-                          extensions: [[$class: 'SubmoduleOption',
-                                        disableSubmodules: false,
-                                        parentCredentials: false,
-                                        recursiveSubmodules: true,
-                                        reference: '',
-                                        trackingSubmodules: false]],
-                          submoduleCfg: [],
-                          userRemoteConfigs: [[url: 'https://github.com/jorgeacf/infrastructure-as-code-demo.git']]
-                ])
-            }
-        }
-
         stage('Execute') {
             steps {
                 sh 'echo "Execute..."'
