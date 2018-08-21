@@ -1,13 +1,13 @@
-
+#!/usr/bin/env groovy
 
 pipeline {
     agent any
 
     stages {
 
-        stage('Execute') {
+        stage('Test in Docker') {
             steps {
-                sh 'echo "Execute..."'
+                sh "$WORKSPACE/scripts/test_in_docker.sh"
             }
         }
         stage('Test') {
