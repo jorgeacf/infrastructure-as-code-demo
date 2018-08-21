@@ -9,5 +9,10 @@ pipeline {
                 sh 'echo "Cloning..."'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'echo "Test..."'
+            }
+        }
     }
 }
