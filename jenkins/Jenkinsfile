@@ -22,9 +22,9 @@ pipeline {
             }
         }
 
-        stage('Clone sources') {
+        stage('Execute') {
             steps {
-                sh 'echo "Cloning..."'
+                sh 'echo "Execute..."'
             }
         }
         stage('Test') {
