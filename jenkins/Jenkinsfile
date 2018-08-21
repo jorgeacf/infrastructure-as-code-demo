@@ -2,11 +2,11 @@
 
 pipeline {
     agent any
-    
+
     stages {
         stage('Clone sources') {
             steps {
-                sh 'Cloning...'
+                sh 'echo "Cloning..."'
             }
         }
     }
