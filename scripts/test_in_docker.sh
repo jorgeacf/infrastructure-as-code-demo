@@ -11,5 +11,5 @@ timestamp="$(date +%Y-%m-%dT%H.%M.%S_%Z)"
 container_id=${container_id:-$timestamp}
 
 # Run the container using the supplied OS.
-printf ${purple}"Starting Docker container: .\n\n"${neutral}
+printf "Starting Docker container: .\n\n" 
 docker pull fedora:latest
